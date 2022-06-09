@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonPropsInterface } from "src/Interface";
+import { ButtonPropsInterface } from "src/types";
 
 const button = (props: ButtonPropsInterface) => {
   const { name, icon } = props;

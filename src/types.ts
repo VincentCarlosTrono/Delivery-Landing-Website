@@ -9,3 +9,8 @@ export interface ServiceDataInterface {
     name: String;
     icon?: any;
   }
+
+  export interface ContactInterface {
+      device: string,
+      contact: any
+  }

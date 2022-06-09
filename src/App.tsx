@@ -6,6 +6,8 @@ import About from "./components/About";
 import Safety from "./components/Safety";
 import Services from "./components/Services";
 import Watch from "./components/Watch";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Safety />
       <Services />
       <Watch />
+      <Contact />
+      <Footer />
     </div>
   );
 }

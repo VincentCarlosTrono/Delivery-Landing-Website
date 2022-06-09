@@ -1,5 +1,5 @@
 import React from "react";
-import { ServiceDataInterface } from "src/Interface";
+import { ServiceDataInterface } from "src/types";
 import Service1 from "../media/img/services1-ilustration.svg";
 import Service2 from "../media/img/services2-ilustration.svg";
 import Service3 from "../media/img/services3-ilustration.svg";
