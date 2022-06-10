@@ -19,20 +19,20 @@ const Contact = () => {
   ];
 
   return (
-    <div className="grid-container py-24">
-      <div className="container  flex">
-        <div className="w-1/2 ">
-          <h1 className="text-5xl max-w-md font-semibold py-5">
+    <div className="grid-container py-5 md:py-24">
+      <div className="container  md:flex">
+        <div className="md:w-1/2 text-center md:px-0 px-2">
+          <h1 className="md:text-5xl text-3xl  md:max-w-md font-semibold py-0 md:py-5">
             Contact Us From Here
           </h1>
-          <p className="max-w-lg text-lg text-gray-500">
+          <p className="md:max-w-lg md:px-0 md:text-lg text-gray-500 md:py-0 py-10">
             You can contact us from here, you can write to us, call us or visit
             our service center, we will gladly assist you.
           </p>
         </div>
 
-        <div className="w-1/2 flex items-center justify-evenly">
-          <div>
+        <div className="md:w-1/2 md:flex items-center md:justify-evenly">
+          <div className="py-5 md:py-0">
             {contactinfos.map((props: ContactInterface) => {
               const { device, contact } = props;
               return (

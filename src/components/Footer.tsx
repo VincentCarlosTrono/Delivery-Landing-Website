@@ -33,42 +33,50 @@ const Footer = () => {
 
   return (
     <div className="grid-container py-24 bg-orange">
-      <div className="container flex justify-between">
-        <div className="">
-          <h1 className="text-lg font-semibold">Delivery</h1>
-          <p>Order Products Faster And Easier</p>
-        </div>
+      <div className="container ">
+        <div className="md:flex justify-between">
+          <div className=" py-3">
+            <h1 className="text-lg font-semibold">Delivery</h1>
+            <p>Order Products Faster And Easier</p>
+          </div>
 
-        <div>
-          <h1 className="text-lg font-semibold">Our Services</h1>
-          {services.map((props) => {
-            const { service1 } = props;
-            return <p>{service1}</p>;
+          <div className="py-3">
+            <h1 className="text-lg font-semibold">Our Services</h1>
+            {services.map((props) => {
+              const { service1 } = props;
+              return <p>{service1}</p>;
+            })}
+          </div>
+
+          {footerInfo.map((props) => {
+            const { title, info1, info2, info3 } = props;
+            return (
+              <div className="py-3">
+                <div>
+                  <h1 className="text-lg font-semibold">{title}</h1>
+                  <p>{info1}</p>
+                  <p>{info2}</p>
+                  <p>{info3}</p>
+                </div>
+              </div>
+            );
           })}
+
+          <div className=" flex gap-1">
+            <p className="hover:cursor-pointer hover:opacity-50 hover:-translate-y-1">
+              <box-icon name="facebook-square" type="logo"></box-icon>
+            </p>
+            <p className="hover:cursor-pointer hover:opacity-50 hover:-translate-y-1">
+              <box-icon name="twitter" type="logo"></box-icon>
+            </p>
+            <p className="hover:cursor-pointer hover:opacity-50 hover:-translate-y-1">
+              <box-icon name="instagram-alt" type="logo"></box-icon>
+            </p>
+          </div>
         </div>
-
-        {footerInfo.map((props) => {
-          const { title, info1, info2, info3 } = props;
-          return (
-            <div>
-              <h1 className="text-lg font-semibold">{title}</h1>
-              <p>{info1}</p>
-              <p>{info2}</p>
-              <p>{info3}</p>
-            </div>
-          );
-        })}
-
-        <div className=" flex gap-1">
-          <p className="hover:cursor-pointer hover:opacity-50 hover:-translate-y-1">
-            <box-icon name="facebook-square" type="logo"></box-icon>
-          </p>
-          <p className="hover:cursor-pointer hover:opacity-50 hover:-translate-y-1">
-            <box-icon name="twitter" type="logo"></box-icon>
-          </p>
-          <p className="hover:cursor-pointer hover:opacity-50 hover:-translate-y-1">
-            <box-icon name="instagram-alt" type="logo"></box-icon>
-          </p>
+        <div className="flex justify-center items-center pt-32">
+          <box-icon color="gray" name="copyright"></box-icon>
+          <h1 className="text-gray-500">Vince. All rights reserved</h1>
         </div>
       </div>
     </div>

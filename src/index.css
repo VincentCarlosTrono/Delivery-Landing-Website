@@ -8,7 +8,7 @@
   scroll-behavior: smooth;
   transition: 0.2s;
   box-sizing: border-box;
-  border: 1px dashed green;
+  /* border: 1px dashed green; */
 }
 
 html,
