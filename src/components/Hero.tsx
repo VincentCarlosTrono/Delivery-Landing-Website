@@ -4,7 +4,7 @@ import Home from "../media/img/home-ilustration.svg";
 
 const Hero = () => {
   return (
-    <div className="grid-container md:py-40 py-8">
+    <div className="grid-container md:py-40 py-8" id="#">
       <div className="container block md:flex items-center gap-2">
         <div className="flex justify-center">
           <img

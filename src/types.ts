@@ -28,3 +28,8 @@ export interface ServiceDataInterface {
     info2: string;
     info3: string;
   }
+
+  export interface HeaderListInterface {
+    header: string;
+    link: string
+  }

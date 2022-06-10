@@ -27,7 +27,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="grid-container py-3 md:py-14">
+    <div className="grid-container py-3 md:py-14" id="service">
       <div className="container">
         <div className="flex justify-center px-10">
           <h1 className="text-center font-semibold text-3xl md:text-5xl  md:max-w-lg py-10 dark:text-white">

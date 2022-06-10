@@ -19,7 +19,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="grid-container py-5 md:py-24">
+    <div className="grid-container py-5 md:py-24" id="contact">
       <div className="container  md:flex">
         <div className="md:w-1/2 text-center md:px-0 px-2">
           <h1 className="md:text-5xl text-3xl md:text-left  md:max-w-md font-semibold py-0 md:py-5 dark:text-white">

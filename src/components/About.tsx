@@ -3,7 +3,7 @@ import AboutImg from "../media/img/about-ilustration.svg";
 
 const About = () => {
   return (
-    <div className="grid-container py-20 md:py-40">
+    <div className="grid-container py-20 md:py-40" id="about">
       <div className="container block md:flex justify-center md:justify-between items-center">
         <img className="w-3/6 md:block hidden" src={AboutImg} alt="homeimage" />
         <div className="text-center">
