@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { FooterInfoInterface } from "src/types";
+import { ThemeContext } from "./ThemeContext";
 
 const Footer = () => {
+  const { darkmode } = useContext(ThemeContext);
   const services = [
     {
       service1: "Pricing",
@@ -16,7 +19,7 @@ const Footer = () => {
     },
   ];
 
-  const footerInfo = [
+  const footerInfos = [
     {
       title: "Our Company",
       info1: "Blog",
@@ -32,31 +35,35 @@ const Footer = () => {
   ];
 
   return (
-    <div className="grid-container py-24 bg-orange">
+    <div className="grid-container py-24  dark:bg-lightblack bg-orange">
       <div className="container ">
         <div className="md:flex justify-between">
           <div className=" py-3">
-            <h1 className="text-lg font-semibold">Delivery</h1>
-            <p>Order Products Faster And Easier</p>
+            <h1 className="text-lg font-semibold dark:text-white">Delivery</h1>
+            <p className="text-gray-400">Order Products Faster And Easier</p>
           </div>
 
           <div className="py-3">
-            <h1 className="text-lg font-semibold">Our Services</h1>
+            <h1 className="text-lg font-semibold dark:text-white">
+              Our Services
+            </h1>
             {services.map((props) => {
               const { service1 } = props;
-              return <p>{service1}</p>;
+              return <p className="text-gray-400">{service1}</p>;
             })}
           </div>
 
-          {footerInfo.map((props) => {
-            const { title, info1, info2, info3 } = props;
+          {footerInfos.map((footerinfo: FooterInfoInterface) => {
+            const { title, info1, info2, info3 } = footerinfo;
             return (
               <div className="py-3">
                 <div>
-                  <h1 className="text-lg font-semibold">{title}</h1>
-                  <p>{info1}</p>
-                  <p>{info2}</p>
-                  <p>{info3}</p>
+                  <h1 className="text-lg font-semibold dark:text-white">
+                    {title}
+                  </h1>
+                  <p className="text-gray-400">{info1}</p>
+                  <p className="text-gray-400">{info2}</p>
+                  <p className="text-gray-400">{info3}</p>
                 </div>
               </div>
             );
@@ -64,13 +71,25 @@ const Footer = () => {
 
           <div className=" flex gap-1">
             <p className="hover:cursor-pointer hover:opacity-50 hover:-translate-y-1">
-              <box-icon name="facebook-square" type="logo"></box-icon>
+              <box-icon
+                color={darkmode ? "white" : "black"}
+                name="facebook-square"
+                type="logo"
+              ></box-icon>
             </p>
             <p className="hover:cursor-pointer hover:opacity-50 hover:-translate-y-1">
-              <box-icon name="twitter" type="logo"></box-icon>
+              <box-icon
+                color={darkmode ? "white" : "black"}
+                name="twitter"
+                type="logo"
+              ></box-icon>
             </p>
             <p className="hover:cursor-pointer hover:opacity-50 hover:-translate-y-1">
-              <box-icon name="instagram-alt" type="logo"></box-icon>
+              <box-icon
+                color={darkmode ? "white" : "black"}
+                name="instagram-alt"
+                type="logo"
+              ></box-icon>
             </p>
           </div>
         </div>

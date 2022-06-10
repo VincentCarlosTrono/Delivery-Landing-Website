@@ -15,10 +15,10 @@ const Hero = () => {
         </div>
 
         <div className="">
-          <h1 className="md:text-6xl text-4xl font-semibold max-w-sm md:max-w-lg md:py-5 pt-16">
+          <h1 className="md:text-6xl text-4xl font-semibold max-w-sm md:max-w-lg md:py-5 pt-16 dark:text-white">
             Order Products Faster Easier
           </h1>
-          <p className="md:max-w-xs max-w-sm text-md md:text-xl  py-5 text-gray-500">
+          <p className="md:max-w-xs max-w-sm text-md md:text-xl  py-5 text-gray-400">
             Order your favorite foods at any time and we will deliver them right
             to where you are.
           </p>

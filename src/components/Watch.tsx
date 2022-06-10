@@ -8,14 +8,14 @@ const Watch = () => {
       <div className="container md:flex justify-center gap-10 items-center">
         <img className="w-2/5 hidden md:block" src={Apps} alt="appimage" />
         <div className=" items-center md:text-left text-center">
-          <h1 className="md:text-5xl text-3xl font-semibold py-5">
+          <h1 className="md:text-5xl text-3xl font-semibold py-5 dark:text-white">
             Watch Your Delivery At Any Time
           </h1>
-          <p className="md:max-w-sm  text-sm md:text-xl  py-3 md:py-5 text-gray-500">
+          <p className="md:max-w-sm  text-sm md:text-xl  py-3 md:py-5 text-gray-400">
             With our app you can view the route of your order, from our local
             headquarters to the place where you are. Look for the app now
           </p>
-          <div className="flex gap-3 pt-3 text-sm md:text-lg md:justify-start justify-center">
+          <div className="flex gap-3 pt-3 text-sm md:text-lg  md:justify-start justify-center">
             <Button
               icon={<box-icon name="apple" type="logo"></box-icon>}
               name={"App Store"}

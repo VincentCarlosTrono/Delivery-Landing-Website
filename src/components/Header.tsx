@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Button from "./button";
+import { ThemeContext } from "./ThemeContext";
 
 const Header = () => {
+  const { darkmode, setDarkmode } = useContext(ThemeContext);
+
   const [menu, setMenu] = useState(false);
 
   console.log(menu);
@@ -31,11 +34,11 @@ const Header = () => {
 
   return (
     <div
-      className={`grid-container sticky top-0 bg-white w-full ${
-        scroll && `shadow-lg ease-in duration-500`
+      className={`grid-container sticky top-0 dark:bg-black bg-white w-full ${
+        scroll && `shadow-lg dark:shadow-gray-900 ease-in duration-500`
       }`}
     >
-      <div className="container flex justify-between items-center py-5 font-semibold text-black">
+      <div className="container flex justify-between items-center py-5 font-semibold dark:text-white text-black">
         <h1>Delivery</h1>
         <div>
           <div className="flex justify-between items-center gap-5">
@@ -51,9 +54,18 @@ const Header = () => {
                 })}
               </li>
             </ul>
-            <div className="md:block hidden">
-              <box-icon name="moon"></box-icon>
-            </div>
+            <button
+              className="hidden md:block"
+              onClick={() => {
+                setDarkmode(!darkmode);
+              }}
+            >
+              {darkmode ? (
+                <box-icon color="white" name="sun"></box-icon>
+              ) : (
+                <box-icon name="moon"></box-icon>
+              )}
+            </button>
             <div className="md:block hidden">
               <Button name="Button!" />
             </div>
@@ -72,7 +84,17 @@ const Header = () => {
             <ul className="">
               <li className=" md:hidden absolute right-0 top-20 bg-gray-200  w-full rounded-xl">
                 <div className="absolute right-24 top-0 p-2">
-                  <box-icon name="moon"></box-icon>
+                  <button
+                    onClick={() => {
+                      setDarkmode(!darkmode);
+                    }}
+                  >
+                    {darkmode ? (
+                      <box-icon name="sun"></box-icon>
+                    ) : (
+                      <box-icon name="moon"></box-icon>
+                    )}{" "}
+                  </button>
                 </div>
 
                 {headerlists.map((headerlist: any) => {

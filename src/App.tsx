@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -8,10 +8,12 @@ import Services from "./components/Services";
 import Watch from "./components/Watch";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { ThemeContext } from "./components/ThemeContext";
 
 function App() {
+  const { darkmode } = useContext(ThemeContext);
   return (
-    <div className="App">
+    <div className={darkmode ? "dark" : "App"}>
       <Header />
       <Hero />
       <About />
