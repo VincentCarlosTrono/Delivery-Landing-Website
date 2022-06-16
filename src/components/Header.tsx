@@ -1,34 +1,31 @@
 import React, { useContext, useEffect, useState } from "react";
-import { HeaderListInterface } from "src/types";
 import Button from "./button";
-import { ThemeContext } from "./ThemeContext";
+import Menu from "./Menu";
+import { ThemeContext } from "../ContextAPI/ThemeContext";
+import { HeaderListInterface, HeaderLists } from "src/types";
+
+export const headerlists: HeaderLists = [
+  {
+    header: "Home",
+    link: "#",
+  },
+  {
+    header: "About us",
+    link: "#about",
+  },
+  {
+    header: "Services",
+    link: "#service",
+  },
+  {
+    header: "Contact us",
+    link: "#contact",
+  },
+];
 
 const Header = () => {
   const { darkmode, setDarkmode } = useContext(ThemeContext);
-
   const [menu, setMenu] = useState(false);
-
-  console.log(menu);
-
-  const headerlists = [
-    {
-      header: "Home",
-      link: "#",
-    },
-    {
-      header: "About us",
-      link: "#about",
-    },
-    {
-      header: "Services",
-      link: "#service",
-    },
-    {
-      header: "Contact us",
-      link: "#contact",
-    },
-  ];
-
   const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
@@ -44,7 +41,7 @@ const Header = () => {
       }`}
     >
       <div className="container flex justify-between items-center py-5 font-semibold dark:text-white text-black">
-        <a href="#">
+        <a href="/">
           <h1 className="hover:text-yellow">Delivery</h1>
         </a>
 
@@ -77,7 +74,7 @@ const Header = () => {
               )}
             </button>
             <div className="md:block hidden">
-              <Button name="Button!" />
+              <Button name="Order Now!" />
             </div>
           </div>
 
@@ -92,39 +89,7 @@ const Header = () => {
               name="chevron-down-square"
             ></box-icon>
           </button>
-          <div className="">
-            {menu && (
-              <ul className="">
-                <li className="md:hidden absolute  transition-500 right-0 top-20 dark:bg-lightblack bg-gray-200  w-full rounded-xl">
-                  <div className="absolute right-24 top-0 p-2">
-                    <button
-                      onClick={() => {
-                        setDarkmode(!darkmode);
-                      }}
-                    >
-                      {darkmode ? (
-                        <box-icon
-                          color={darkmode ? "white" : "black"}
-                          name="sun"
-                        ></box-icon>
-                      ) : (
-                        <box-icon name="moon"></box-icon>
-                      )}
-                    </button>
-                  </div>
-
-                  {headerlists.map((headerlist: any) => {
-                    const { header } = headerlist;
-                    return (
-                      <div className=" text-center py-5 ">
-                        <h1 className="">{header}</h1>
-                      </div>
-                    );
-                  })}
-                </li>
-              </ul>
-            )}
-          </div>
+          <div>{menu && <Menu menu={menu} setMenu={setMenu} />}</div>
         </div>
       </div>
     </div>

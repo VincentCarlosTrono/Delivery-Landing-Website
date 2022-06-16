@@ -1,9 +1,9 @@
 import React from "react";
 import Button from "./button";
-import { ContactInterface } from "src/types";
+import { ContactInterface, Contacts } from "src/types";
 
 const Contact = () => {
-  const contactinfos = [
+  const contactinfos: Contacts = [
     {
       device: "Telephone:",
       contact: "999-888-777",

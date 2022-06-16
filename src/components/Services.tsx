@@ -1,11 +1,11 @@
 import React from "react";
-import { ServiceDataInterface } from "src/types";
 import Service1 from "../media/img/services1-ilustration.svg";
 import Service2 from "../media/img/services2-ilustration.svg";
 import Service3 from "../media/img/services3-ilustration.svg";
+import { ServiceDataInterface, ServiceLists } from "src/types";
 
 const Services = () => {
-  const services = [
+  const services: ServiceLists = [
     {
       title: "Payment Done",
       image: Service1,

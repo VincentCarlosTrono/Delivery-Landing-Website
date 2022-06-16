@@ -1,6 +1,6 @@
 import React from "react";
-import Apps from "../media/img/app-ilustration.svg";
 import Button from "./button";
+import Apps from "../media/img/app-ilustration.svg";
 
 const Watch = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import Buttonn from "./button";
+import Button from "./button";
 import Home from "../media/img/home-ilustration.svg";
 
 const Hero = () => {
@@ -22,7 +22,7 @@ const Hero = () => {
             Order your favorite foods at any time and we will deliver them right
             to where you are.
           </p>
-          <Buttonn name="Get Started" />
+          <Button name="Get Started" />
         </div>
         <img className="w-3/5 md:block hidden" src={Home} alt="homeimage" />
       </div>

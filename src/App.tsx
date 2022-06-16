@@ -8,7 +8,7 @@ import Services from "./components/Services";
 import Watch from "./components/Watch";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import { ThemeContext } from "./components/ThemeContext";
+import { ThemeContext } from "./ContextAPI/ThemeContext";
 
 function App() {
   const { darkmode } = useContext(ThemeContext);

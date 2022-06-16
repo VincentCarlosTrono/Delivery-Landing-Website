@@ -4,6 +4,7 @@ export interface ServiceDataInterface {
     description: string;
     more: string;
   }
+  export type ServiceLists = Array<ServiceDataInterface>
 
   export interface ButtonPropsInterface {
     name: String;
@@ -14,6 +15,7 @@ export interface ServiceDataInterface {
       device: string,
       contact: any
   }
+  export type Contacts = Array<ContactInterface>
 
   export interface ServiceDataInterface {
     title: string;
@@ -29,7 +31,14 @@ export interface ServiceDataInterface {
     info3: string;
   }
 
+  export interface MenuPropsInterface {
+    menu: boolean;
+    setMenu: React.Dispatch<React.SetStateAction<boolean>>;
+  }
+
   export interface HeaderListInterface {
     header: string;
     link: string
   }
+  export type HeaderLists = Array<HeaderListInterface>;
+  

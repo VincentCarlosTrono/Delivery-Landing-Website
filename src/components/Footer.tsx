@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
+import { ThemeContext } from "../ContextAPI/ThemeContext";
 import { FooterInfoInterface } from "src/types";
-import { ThemeContext } from "./ThemeContext";
 
 const Footer = () => {
   const { darkmode } = useContext(ThemeContext);
