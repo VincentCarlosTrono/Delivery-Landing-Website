@@ -84,10 +84,17 @@ const Header = () => {
               setMenu(!menu);
             }}
           >
-            <box-icon
-              color={darkmode ? "white" : "black"}
-              name="chevron-down-square"
-            ></box-icon>
+            {menu ? (
+              <box-icon
+                name="chevron-up-square"
+                color={darkmode ? "white" : "black"}
+              />
+            ) : (
+              <box-icon
+                color={darkmode ? "white" : "black"}
+                name="chevron-down-square"
+              />
+            )}
           </button>
           <div>{menu && <Menu menu={menu} setMenu={setMenu} />}</div>
         </div>

@@ -9,7 +9,7 @@ const Menu = (props: MenuPropsInterface) => {
 
   return (
     <ul>
-      <li className="md:hidden absolute  transition-500 right-0 top-20 dark:bg-lightblack bg-gray-200  w-full rounded-xl">
+      <li className="md:hidden absolute  transition-500 right-0 top-20 dark:bg-lightblack bg-gray-200  w-full">
         <div className="absolute right-24 top-0 p-2">
           <button
             onClick={() => {
